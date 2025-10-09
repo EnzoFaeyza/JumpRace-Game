@@ -19,8 +19,19 @@
         </div>
     </div>
 
-    
+    <button class="btnCredit" id="btnCredit">Credit</button>
+
+    <div class="container-credit" id="container-credit">
+        <img src="/img/karakterkita/urutan1.png" alt="">
+        
+        <div class="credit">
+            <p class="close" id="close">&times;</p>
+        <p>Credit By: <br>Enzo and Team <br> harapanrakyat.com</p>
+        </div>
+        <img src="img/musuh/urutan1.png" alt="">
+    </div>
   
+    
     <script>
         const namamu = document.getElementById('Nickname');
         const btn_start = document.getElementById('btn_start');
@@ -41,6 +52,18 @@
             } else {
                 SimpanData();
             }
+        })
+
+        const btnClose = document.getElementById("close")
+        const credit = document.getElementById("container-credit")
+        const btnCredit= document.getElementById("btnCredit")
+        btnClose.addEventListener("click", ()=>{
+            credit.classList.remove('open')   
+            
+        })
+
+        btnCredit.addEventListener("click", ()=>{
+            credit.classList.add("open")
         })
     </script>
 </body>
