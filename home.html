@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JumpRace</title>
+</head>
+
+<body class="home">
+    <audio src="music/Hari Merdeka Instrumental - Backsound Cinematic Semangat No Copyright  Koceak Music.mp3" autoplay
+        loop></audio>
+    <div class="container-home">
+        <img src="img/logo.png" alt="">
+        <div class="name-input">
+            <input type="text" placeholder="Namamu" id="Nickname">
+            <button id="btn_start">Start</button>
+        </div>
+    </div>
+
+    
+  
+    <script>
+        const namamu = document.getElementById('Nickname');
+        const btn_start = document.getElementById('btn_start');
+
+        function SimpanData() {
+            const simpanNama = namamu.value;
+            localStorage.setItem('namamu', simpanNama);
+
+            window.location.href = "game.html";
+
+            localStorage.setItem('mulaiTimer', true)
+        }
+
+        btn_start.addEventListener('click', () => {
+
+            if (namamu.value == "") {
+                alert('Isi Nama Terlebih Dahulu');
+            } else {
+                SimpanData();
+            }
+        })
+    </script>
+</body>
+
+</html>

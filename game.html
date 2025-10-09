@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body class="bg-game">
+  <audio src="music/Hari Merdeka Instrumental - Backsound Cinematic Semangat No Copyright  Koceak Music.mp3" autoplay
+    loop></audio>
+
+  <img id="karakter" src="img/karakterkita/urutan1.png" alt="Karakter Balap Karung" />
+  <img id="bot-karakter" src="img/musuh/urutan1.png" alt="Bot Karakter" />
+  <p id="display-waktu">00:00:000</p>
+
+
+  <!-- Timing Bar untuk Jump -->
+  <div id="timing-bar-container" style="display: none">
+    <div id="timing-bar">
+      <div id="timing-indicator"></div>
+      <div id="success-zone"></div>
+    </div>
+  </div>
+  <div class="container-leaderboard" style="display: none;">
+    <div class="leaderboard">
+      <img src="img/logo.png" alt="Logo" class="leaderboard-logo">
+      <h1 id="game-result">🎉 YOU WIN! 🎉</h1>
+      <div class="race-results">
+        <h3>🏁 Race Results:</h3>
+        <div class="results-list">
+          <div class="result-entry" id="player-result">
+            <span class="position" id="player-position">🥇</span>
+            <span class="name" id="player-name">Player</span>
+            <span class="time" id="player-time">00:00:000</span>
+          </div>
+          <div class="result-entry" id="bot-result">
+            <span class="position" id="bot-position">🥈</span>
+            <span class="name">BOT</span>
+            <span class="time" id="bot-time">--:--:---</span>
+          </div>
+        </div>
+      </div>
+      <div class="leaderboard-buttons">
+        <button id="play-again-btn">Play Again</button>
+        <button id="home-btn">Home</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+
+</html>
