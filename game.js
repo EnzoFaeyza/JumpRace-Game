@@ -375,6 +375,8 @@ function showLeaderboard(playerName, playerTime, isPlayerWin) {
   const botResult = document.getElementById('bot-result');
   const playerPosition = document.getElementById('player-position');
   const botPosition = document.getElementById('bot-position');
+   const audio = document.getElementById("main-sound");
+    audio.pause()
 
   // Update nama player
   playerNameSpan.textContent = playerName;
@@ -392,6 +394,8 @@ function showLeaderboard(playerName, playerTime, isPlayerWin) {
 
     playerResult.classList.add('winner');
     botResult.classList.remove('winner');
+    let soundPlayer = new Audio('music/win.mp3');
+    soundPlayer.play();
   } else {
     // Bot menang
     gameResult.textContent = '😢 BOT WINS! 😢';
@@ -403,6 +407,8 @@ function showLeaderboard(playerName, playerTime, isPlayerWin) {
 
     botResult.classList.add('winner');
     playerResult.classList.remove('winner');
+    let soundPlayer = new Audio('music/lose.mp3');
+    soundPlayer.play();
   }
 
   // Tampilkan leaderboard
